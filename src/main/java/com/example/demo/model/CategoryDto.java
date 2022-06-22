@@ -1,13 +1,14 @@
 package com.example.demo.model;
 
+import java.io.Serializable;
+
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.Length;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
 
 @Data
  @AllArgsConstructor
@@ -19,5 +20,7 @@ public class CategoryDto implements Serializable {
     @Length(min=5)
     private  String name;
     private Boolean isEdit=false;
+    public void setIsEdit(boolean b) {
+    }
 
 }

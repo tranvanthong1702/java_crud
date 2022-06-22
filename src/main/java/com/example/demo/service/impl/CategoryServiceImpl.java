@@ -3,6 +3,7 @@ package com.example.demo.service.impl;
 import com.example.demo.domain.Category;
 import com.example.demo.repository.CategoryRespository;
 import com.example.demo.service.CategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -13,6 +14,7 @@ import java.util.Optional;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
+    @Autowired
     CategoryRespository categoryRespository;
 
     public CategoryServiceImpl(CategoryRespository categoryRespository) {
